@@ -35,7 +35,10 @@ function currentLine (line) {
     return message
   }
   else { //otherwise, return a message with the list of names from the line array
-    var message = `The line is currently: 1. ${line[0]}, 2. ${line[1]}, 3. ${line[2]}`
+    var message = `The line is currently:`
+    for (var i = 0; i < line.length; i++) {
+      message+= `${i +1}. ${line[i]}, `
+    }
     return message
   }
 }
